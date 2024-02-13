@@ -1,9 +1,22 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 
-const initialState: any = [
-  { id: 1, title: "Task 1", description: "Description 1", notes: "Notes 1" },
-]; // Initial state
+interface ITask {
+  id: number;
+  title: string;
+  description: string;
+  notes: string;
+}
+
+interface CartState {
+  items: ITask[];
+  error: string | null;
+}
+
+const initialState: CartState = {
+  items: [],
+  error: null,
+};
 
 const taskSlice = createSlice({
   name: "task",
