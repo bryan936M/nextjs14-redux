@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { RootState } from "../store";
 
 const initialState: any = [
   { id: 1, title: "Task 1", description: "Description 1", notes: "Notes 1" },
@@ -22,5 +23,8 @@ const taskSlice = createSlice({
     // Add extra reducers here
   },
 });
+
+export const selectTasks = (state: RootState) => state.task; // Selectors
+export const taskActions = taskSlice.actions;
 
 export default taskSlice.reducer;
