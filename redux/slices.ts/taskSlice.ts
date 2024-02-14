@@ -24,9 +24,11 @@ const taskSlice = createSlice({
   reducers: {
     addTask: (state, action: PayloadAction<any>) => {
       // Add task to state
+      state.items.push()
     },
     removeTask: (state, action: PayloadAction<any>) => {
       // Remove task from state
+      state.items.filter((val) => )
     },
     updateTask: (state, action: PayloadAction<any>) => {
       // Update task in state
