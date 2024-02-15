@@ -9,9 +9,17 @@ const Tasks = (props: Props) => {
   const dispatch = useAppDispatch()
   const {items, error} = useAppSelector(selectTasks)
 
-  return (
-    <div>Tasks</div>
-  )
+  return <div>
+    <h1>Task Manager</h1>
+    <input type="text" name="task_input" id="task_input" />
+    <form>
+      <div>
+        <p>task 1</p>
+        <button type="button">edit</button>
+        <button type="button">Delete</button>
+      </div>
+    </form>
+  </div>;
 }
 
 export default Tasks
