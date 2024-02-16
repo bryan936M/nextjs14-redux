@@ -34,3 +34,44 @@ To get started with the project, follow these steps:
 4. **Open the Application**:
     Visit [http://localhost:3000](http://localhost:3000) in your browser to see the application running.
 
+## Folder Structure
+
+The project follows a typical Next.js folder structure with Redux integration:
+
+- **`/pages`**: Contains Next.js pages for routing.
+- **`/components`**: Reusable React components.
+- **`/redux`**: Redux-related files including actions, reducers, and store configuration.
+- **`/styles`**: Global styles or styling utilities.
+
+## Available Scripts
+
+In the project directory, you can run:
+
+- **`npm run dev`**: Runs the Next.js development server.
+- **`npm run build`**: Builds the production version of the application.
+- **`npm start`**: Starts the Next.js production server.
+- **`npm run lint`**: Runs ESLint to lint the project files.
+- **`npm run test`**: Runs any available tests.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Thank you to the Next.js and Redux communities for their fantastic tools and resources.
+- Special thanks to all contributors who helped improve this project.
+
+---
+
+Feel free to customize this README as needed for your specific project. Happy coding! 🚀
