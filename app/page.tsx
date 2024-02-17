@@ -1,4 +1,5 @@
-import Tasks from "./components/Task";
+'use client'
+import Tasks from "../components/Task";
 
 export default function Home() {
   return (

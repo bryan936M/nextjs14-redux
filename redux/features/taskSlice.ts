@@ -1,19 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
+import { IState } from "../../Interfaces/IState";
 
-interface ITask {
-  id: number;
-  title: string;
-  description: string;
-  notes: string;
-}
-
-interface CartState {
-  items: ITask[];
-  error: string | null;
-}
-
-const initialState: CartState = {
+const initialState: IState = {
   items: [],
   error: null,
 };
@@ -24,11 +13,11 @@ const taskSlice = createSlice({
   reducers: {
     addTask: (state, action: PayloadAction<any>) => {
       // Add task to state
-      state.items.push(action.payload)
+      state.items.push(action.payload);
     },
     removeTask: (state, action: PayloadAction<any>) => {
       // Remove task from state
-      state.items.filter((val) => val != action.payload)
+      state.items.filter((val) => val != action.payload);
     },
     updateTask: (state, action: PayloadAction<any>) => {
       // Update task in state
