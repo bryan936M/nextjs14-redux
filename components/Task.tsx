@@ -1,24 +1,29 @@
-import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import { selectTasks, taskActions } from "@/redux/features/taskSlice";
+import { ITask } from "@/Interfaces/ITask";
 import React from "react";
+import TaskCard from "./TaskCard";
 
 type Props = {};
+const tasks: ITask[] = [
+  { title: "task 1", description: "Home stuff", id: 1, isCompleted: false },
+  { title: "task 1", description: "Home stuff", id: 2, isCompleted: false },
+  { title: "task 1", description: "Home stuff", id: 3, isCompleted: false },
+];
 
 const Tasks = (props: Props) => {
-  const dispatch = useAppDispatch();
-  const { items, error } = useAppSelector(selectTasks);
-
   return (
-    <div>
-      <h1>Task Manager</h1>
-      <input type="text" name="task_input" id="task_input" />
-      <form>
-        <div>
-          <p>task 1</p>
-          <button type="button">edit</button>
-          <button type="button">Delete</button>
-        </div>
-      </form>
+    <div className="h-3/6 w-1/2 mx-auto space-y-3">
+      <h1 className="text-2xl capitalize font-bold">Tasks</h1>
+      <div className="h-fit">
+        {tasks.map((task) => (
+          <TaskCard
+            key={task.id}
+            id={task.id}
+            title={task.title}
+            description={task.description}
+            isCompleted={task.isCompleted}
+          />
+        ))}
+      </div>
     </div>
   );
 };
