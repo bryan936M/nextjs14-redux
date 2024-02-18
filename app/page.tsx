@@ -10,18 +10,18 @@ export default function Home() {
   return (
     <main className="h-full flex flex-col justify-center space-y-5">
       {/*tas input form */}
-      <form onSubmit={handleSubmit} className="max-w-min mx-auto space-y-2">
+      <form onSubmit={handleSubmit} className="w-1/2 mx-auto space-y-2">
         <h1 className="font-extrabold text-2xl text-slate-200">Task</h1>
         <div className="flex space-x-3">
           <input
             type="text"
             name="task_input"
             id="task_input"
-            className="bg-slate-600 h-full p-3 rounded-lg text-2xl text-slate-300"
+            className="bg-slate-600 w-3/4 h-full p-3 rounded-lg text-2xl text-slate-300"
           />
           <button
             type="submit"
-            className="bg-black text-white text-2xl p-3 rounded-lg"
+            className="w-1/4 bg-black text-white text-2xl p-3 rounded-lg hover:bg-slate-700 transition-all duration-300 ease-in-out"
           >
             Add
           </button>
