@@ -28,7 +28,7 @@ const TaskCard = ({
       <div className="flex justify-between items-center mt-3">
         <button
           onClick={handleCompleted}
-          className="text-slate p-2 rounded-lg transition-all duration-300 ease-in-out hover:bg-blue-300 hover:text-white"
+          className="text-slate p-2 rounded-lg transition-all duration-300 ease-in-out hover:bg-slate-400 hover:text-white"
         >
           {isCompleted ? "Mark as not completed" : "Mark as completed"}
         </button>

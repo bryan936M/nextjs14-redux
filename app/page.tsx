@@ -8,7 +8,7 @@ export default function Home() {
   }
 
   return (
-    <main className="h-full flex flex-col justify-center space-y-5">
+    <main className="h-full flex flex-col justify-end py-5 space-y-5">
       {/*tas input form */}
       <form onSubmit={handleSubmit} className="w-1/2 mx-auto space-y-2">
         <h1 className="font-extrabold text-2xl text-slate-200">Task</h1>
@@ -29,6 +29,7 @@ export default function Home() {
       </form>
 
       {/* tasks list */}
+      
       <Tasks />
     </main>
   );
